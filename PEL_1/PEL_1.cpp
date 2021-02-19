@@ -9,7 +9,8 @@ int main()
     bez_znamenka = i = numeric_limits<uint16_t>::min();
     znamenko = j = numeric_limits<int16_t>::min();
 
-    do {
+    do 
+    {
         i++;
         j++;
         printf("%d %d, hex: %x %x\n", i, j, i, j);
