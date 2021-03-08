@@ -21,6 +21,12 @@ void vypis(void* adresa, int delka, int format)
     { 
         switch ( format )
         {
+            case 8:
+            {
+                unsigned char bit8 = *((unsigned char*)adresa + i);
+                printf("%8x ", bit8);
+                break;
+            }
             case 16:
             {
                 unsigned short int bit16 = *((unsigned short int*)adresa + i);
@@ -33,20 +39,14 @@ void vypis(void* adresa, int delka, int format)
                 printf("%8x ", bit32);
                 break;
             }
-            case 8:
-            {
-                unsigned char bit8 = *((unsigned char*)adresa + i);
-                printf("%8x ", bit8);
-                break;
-            }
             default:
                 printf("Zadejte spravny format!");
                 return;
         }
-
         auto prvek = ((int*)adresa)[i];
 
-        if (((i + 1) % (sizeof(prvek) / (format / 8))) == 0) printf("\n");
+        if (((i + 1) % (sizeof(prvek) / (format / 8))) == 0)
+            printf("\n");
     }
     printf("\n");
 }
@@ -75,9 +75,8 @@ int main()
     unsigned int pole[20];
 
     srand(time(NULL));
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 20; i++)
         pole[i] = rand_int();
-    }
 
     auto* adresa_pole = &pole;
     auto delka_pole = sizeof(pole);
