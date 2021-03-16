@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PEL_1", "PEL_1\PEL_1.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PEL_2", "PEL_2\PEL_2.vcxproj", "{EA3E23A0-04CB-4391-9020-6F2E926FCBA8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PEL_3", "PEL_3\PEL_3.vcxproj", "{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{EA3E23A0-04CB-4391-9020-6F2E926FCBA8}.Release|x64.Build.0 = Release|x64
 		{EA3E23A0-04CB-4391-9020-6F2E926FCBA8}.Release|x86.ActiveCfg = Release|Win32
 		{EA3E23A0-04CB-4391-9020-6F2E926FCBA8}.Release|x86.Build.0 = Release|Win32
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Debug|x64.ActiveCfg = Debug|x64
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Debug|x64.Build.0 = Debug|x64
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Debug|x86.ActiveCfg = Debug|Win32
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Debug|x86.Build.0 = Debug|Win32
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Release|x64.ActiveCfg = Release|x64
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Release|x64.Build.0 = Release|x64
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Release|x86.ActiveCfg = Release|Win32
+		{8E75C87F-13F4-4D18-B9BD-0D637F8F9D7C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
