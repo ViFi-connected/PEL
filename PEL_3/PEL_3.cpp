@@ -7,7 +7,7 @@ typedef struct Struct
     char cardinal = 0;
     float minutes = 0.0;
     float seconds = 0.0;
-}Struct;
+};
 
 char ctiZnak()
 {
@@ -82,13 +82,11 @@ T inputDecimal(int j)
 double gpsConvert(Struct gps, char format)
 {
     printf("\nZadejte GPS souradnice: ");
-    // nacitani stupnu - max 3 cislice
-    gps.degrees = inputNonDecimal<int>(3);
+    gps.degrees = inputNonDecimal<int>(3);          // nacitani stupnu - max 3 cislice
     
-    //nacitani svetove strany
     int i = 0;
     char c = 0;
-    while (i < 1)
+    while (i < 1)                                   // nacitani svetove strany
     {
         c = ctiZnak();
 
@@ -102,20 +100,15 @@ double gpsConvert(Struct gps, char format)
             break;
     }
     printf(" ");
-
-    //prepinac formatu
-    switch (format)
+    
+    switch (format)                                 // prepinac formatu
     {
     case '1':
-        // nacitani minut - max 2 cislice
-        gps.minutes = inputNonDecimal<float>(2);
-
-        //nacitani vterin
-        gps.seconds = inputDecimal<float>(9);
+        gps.minutes = inputNonDecimal<float>(2);    // nacitani minut - max 2 cislice
+        gps.seconds = inputDecimal<float>(9);       // nacitani vterin - max 9 znaku
         break;
     case '2':
-        // nacitani minut
-        gps.minutes = inputDecimal<float>(9);
+        gps.minutes = inputDecimal<float>(9);       // nacitani minut - max 9 znaku
         break;
     default:
         break;
@@ -142,7 +135,6 @@ int main()
             break;
         }
     }
-
     printf("\n\nVysledek: %f", gpsConvert(gps, c));
     printf("\n");
 }
