@@ -9,29 +9,29 @@ typedef struct Struct
     float seconds = 0.0;
 };
 
-char ctiZnak()
+char ctiZnak()                                  // nacitani znaku
 {
     return _getch();
 }
 
-template <typename T>
-T inputNonDecimal(int j)
+template <typename T>                        
+T inputNonDecimal(int j)                        // funkce pro naètení celých èísel
 {   
     int i, number;
     number = i = 0;
     char c = 0;
-    while (i < j)
+    while (i < j)                               // j je max poèet èíslic
     {
         c = ctiZnak();
 
-        if ((c >= '0') && (c <= '9'))
+        if ((c >= '0') && (c <= '9'))           // akceptuji jen cislice
         {
-            number *= 10;
+            number *= 10;                       // posouvani cislic v cisle
             number += c - '0';
-            printf("%d", c - '0');
+            printf("%d", c - '0');              
             i++;
         }
-        else if (c == '\r')
+        else if (c == '\r')                     // enter zrusi cyklus - dalsi cislo
             break;
     }
     printf(" ");
@@ -43,7 +43,7 @@ T inputDecimal(int j)
 {
     int i = 0;
     float f, number;
-    bool decimal = false;
+    bool decimal = false;                       // flag jestli uz pocitam desetiny
     char c = 0;
 
     number = 0.0;
@@ -55,19 +55,19 @@ T inputDecimal(int j)
 
         if ((c >= '0') && (c <= '9'))
         {
-            if (f == 1)
+            if (f == 1)                         // cely cislo
             {
                 number *= 10;
                 number += c - '0';
             }
             else
-            {
-                number += (c - '0') * f;
+            {   
+                number += (c - '0') * f;        // desetiny
                 f /= 10;
             }
             printf("%d", c - '0');
         }
-        if ((c == '.' || i == 2) && decimal == false)
+        if ((c == '.' || i == 2) && decimal == false)       // pokud zadam tecku nebo uz jsem zadal 2 cislice zacinam zadavat desetinny mista
         {
             f = 0.1F;
             printf(".");
@@ -79,7 +79,7 @@ T inputDecimal(int j)
     return number;
 }
 
-double gpsConvert(Struct gps, char format)
+double gpsConvert(Struct gps, char format)          // volani nacitacich funkci a vypocet
 {
     printf("\nZadejte GPS souradnice: ");
     gps.degrees = inputNonDecimal<int>(3);          // nacitani stupnu - max 3 cislice
@@ -125,7 +125,7 @@ int main()
     printf("2) ddd N/S/E/W mm.ffffff\n ");
     printf("\nZadejte format GPS souradnic: ");
 
-    while (true)
+    while (true)                // volba formatu
     {
         c = ctiZnak();
 
