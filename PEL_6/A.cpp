@@ -19,9 +19,11 @@ void dealloc(void* address)
 
 void dump(void *address, unsigned int size)
 {
+    printf("Vypis pameti:\n\n");
+
     unsigned char* p = (unsigned char*)address;
     for (unsigned int i = 0; i < size; i++) {
         printf("%02hhX ", p[i]);
     }
-    printf("\n");
+    printf("\n\n");
 }

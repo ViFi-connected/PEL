@@ -4,7 +4,8 @@
 
 int main()
 {
-    BMP bmp = read_bmp("trollface.bmp");
+    BMP bmp = read_bmp("intelww4.bmp");
+    dump(bmp.address, bmp.fileSize);
     show_bmp_data(bmp.address, bmp.width, bmp.height, bmp.colorDepth);
     dealloc(bmp.address);
 }
