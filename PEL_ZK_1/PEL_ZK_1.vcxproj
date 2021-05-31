@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2d7c3f24-1b87-4736-bf1d-ee65d47cfd50}</ProjectGuid>
-    <RootNamespace>PEL6</RootNamespace>
+    <ProjectGuid>{d08a72b2-fbcf-44e4-a9cf-0abe2600d970}</ProjectGuid>
+    <RootNamespace>PELZK1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,16 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="A.cpp" />
-    <ClCompile Include="B.cpp" />
-    <ClCompile Include="PEL_6.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="A.h" />
-    <ClInclude Include="B.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\PEL_5\intelww4.bmp" />
+    <ClCompile Include="PEL_ZK_1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
